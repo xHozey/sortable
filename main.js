@@ -8,7 +8,7 @@ fetch("https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json")
 const handleHeroes = (heroes) => {
   document.getElementById('select').addEventListener('change', (val) => {
     if (val.target.value != 'all') {
-   let filtred =  heroes.slice(1, parseInt(val.target.value))
+   let filtred =  heroes.slice(0, parseInt(val.target.value))
   filtred.forEach(hero => {
     let tr = document.createElement("tr");
     let icon = document.createElement("td");
