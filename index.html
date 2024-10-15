@@ -1,42 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villain</title>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Sortable</title>
 </head>
 
 <body>
-    <select id="select">
-        <option value="10">10</option>
-        <option value="20" selected>20</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-        <option value="all">all results</option>
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Search superheroes by name..." /><br />
+  </div>
+  <table id="mytable">
+    <thead>
+      <tr>
+        <th>Icon</th>
+        <th id="name" onclick="nn()" order="asc">Name</th>
+        <th id="fullname" onclick="fullName()" order="asc">Full Name</th>
+        <th id="powerstats" onclick="powerStats()" order="asc">Powers Stats</th>
+        <th id="race" onclick="race()" order="asc">Race</th>
+        <th id="gender" onclick="gender()" order="asc">Gender</th>
+        <th id="heigth" onclick="heighttt()" order="asc">Height</th>
+        <th id="weight" onclick="weight()" order="asc">Weight</th>
+        <th id="placeofbirth" onclick="placeOfBirth()" order="asc">Place of Birth</th>
+        <th id="alignment" onclick="alignment()" order="asc">Alignment</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="selectPagination">
+    <div id="pagination"></div>
+    <select id="pageSizeSelector">
+      <option value="10">10</option>
+      <option value="20" selected>20</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+      <option value="all">All</option>
     </select>
-    <table>
-        <thead>
-            <th>Icon</th>
-            <th>Name</th>
-            <th>Full Name</th>
-            <th>Powerstats</th>
-            <th>Race</th>
-            <th>Gender</th>
-            <th>Heigth</th>
-            <th>Weigth</th>
-            <th>Place Of Birth</th>
-            <th>Alignment</th>
-        </thead>
-        <tbody id="heroes"></tbody>
-    </table>
-    <script src="main.js"></script>
+  </div>
+  <script src="main.js"></script>
 </body>
-
 </html>
